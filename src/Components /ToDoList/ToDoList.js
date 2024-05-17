@@ -1,12 +1,17 @@
 import React from "react";
 import Task from "./Task/Task";
 
-export default function ToDoList({ tasks }) {
+export default function ToDoList({ tasks, onCompleteTask, onDeleteTask }) {
   return (
     <div>
       <ul>
         {tasks.map((task) => (
-          <Task task={task} key={task.id} />
+          <Task
+            task={task}
+            key={task.id}
+            onCompleteTask={onCompleteTask}
+            onDeleteTask={onDeleteTask}
+          />
         ))}
       </ul>
     </div>

@@ -19,10 +19,11 @@ export default function AddTasks({ onAddTasks }) {
   }
 
   return (
-    <div>
+    <div className="add-task-container">
       <input
         type="text"
         placeholder="Enter tasks..."
+        size="30"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       ></input>

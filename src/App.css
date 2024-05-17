@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.5rem;
+  background-color: #b1dbd7;
+  color: #5a3e2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container {
+  width: 800px;
+  height: 900px;
+  margin: 30px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+}
+body .add-task-container {
+  width: 100%;
+}
+body .add-task-container button {
+  background-color: #54b2af;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 5px 35px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 5px;
+}
+body .add-task-container input {
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 5px 0;
+  font-size: 1.2rem;
+}/*# sourceMappingURL=APP.css.map */
