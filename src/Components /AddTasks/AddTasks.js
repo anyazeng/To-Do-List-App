@@ -8,9 +8,9 @@ export default function AddTasks({ onAddTasks }) {
 
     if (!description) return;
     const newTask = {
-      id: Date.now(),
       description,
       completed: false,
+      id: Date.now(),
     };
 
     onAddTasks(newTask);
