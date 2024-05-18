@@ -1,15 +1,12 @@
 import React from "react";
 
-export default function Task({ task, onCompleteTask, onDeleteTask }) {
+export default function Task({ task, onToggleTask, onDeleteTask }) {
   return (
     <li>
-      <input
-        type="checkbox"
-        id="check-complete"
-        onClick={() => onCompleteTask(task.id)}
-      ></input>
-      <label for="check-complete"></label>
-      <span>{task.description}</span>
+      <input type="checkbox" onChange={() => onToggleTask(task.id)} />
+      <span style={task.completed ? { textDecoration: "line-through" } : {}}>
+        {task.description}
+      </span>
       <button onClick={() => onDeleteTask(task.id)}>❌</button>
     </li>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import Task from "./Task/Task";
 
-export default function ToDoList({ tasks, onCompleteTask, onDeleteTask }) {
+export default function ToDoList({ tasks, onToggleTask, onDeleteTask }) {
   return (
     <div>
       <ul>
@@ -9,7 +9,7 @@ export default function ToDoList({ tasks, onCompleteTask, onDeleteTask }) {
           <Task
             task={task}
             key={task.id}
-            onCompleteTask={onCompleteTask}
+            onToggleTask={onToggleTask}
             onDeleteTask={onDeleteTask}
           />
         ))}
@@ -19,7 +19,7 @@ export default function ToDoList({ tasks, onCompleteTask, onDeleteTask }) {
 }
 
 // const toDoTasks = [
-//   { id: 1, description: "homework", completed: false },
+//   { id: 1, description: "homework", completed: true },
 //   { id: 2, description: "tax return", completed: false },
 //   { id: 3, description: "laundury", completed: false },
 // ];

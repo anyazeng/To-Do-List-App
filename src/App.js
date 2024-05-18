@@ -25,12 +25,16 @@ function App() {
     setTasks((tasks) => [...tasks, task]);
   }
 
-  function handleCompleteTask(id) {
+  function handleDeleteTask(id) {
     setTasks((tasks) => tasks.filter((task) => task.id !== id));
   }
 
-  function handleDeleteTask(id) {
-    setTasks((tasks) => tasks.filter((task) => task.id !== id));
+  function handleToggleTask(id) {
+    setTasks((tasks) =>
+      tasks.map((task) =>
+        task.id === id ? { ...task, completed: !task.completed } : task
+      )
+    );
   }
 
   return (
@@ -41,7 +45,7 @@ function App() {
       <AddTasks onAddTasks={handleAddTasks} />
       <ToDoList
         tasks={tasks}
-        onCompleteTask={handleCompleteTask}
+        onToggleTask={handleToggleTask}
         onDeleteTask={handleDeleteTask}
       />
     </div>
