@@ -3,7 +3,7 @@ import Task from "./Task/Task";
 
 export default function ToDoList({ tasks, onToggleTask, onDeleteTask }) {
   return (
-    <div>
+    <div className="list">
       <ul>
         {tasks.map((task) => (
           <Task

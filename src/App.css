@@ -12,6 +12,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+body h1 {
+  margin: 0 0 10px 0;
+}
 body .container {
   width: 800px;
   height: 900px;
@@ -31,13 +34,36 @@ body .add-task-container button {
   margin: 15px 5px;
   border: none;
   border-radius: 5px;
+  text-transform: uppercase;
 }
 body .add-task-container input {
   border: none;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  padding: 5px 0;
+  padding: 5px;
   font-size: 1.2rem;
 }
-body li {
+body .list {
+  margin: 20px 0;
+}
+body .list ul li {
   list-style: none;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+}
+body .list input[type=checkbox] {
+  height: 1.6rem;
+  width: 1.6rem;
+  accent-color: #54b2af;
+  color: #fff;
+}
+body .list span {
+  padding: 0 5px;
+  font-size: 1.6rem;
+  align-items: center;
+}
+body .list button {
+  border: none;
+  background: transparent;
 }/*# sourceMappingURL=APP.css.map */
