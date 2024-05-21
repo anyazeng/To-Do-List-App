@@ -63,7 +63,20 @@ body .list span {
   font-size: 1.6rem;
   align-items: center;
 }
+body .list span.completed {
+  color: grey;
+  text-decoration: line-through;
+}
 body .list button {
   border: none;
   background: transparent;
+}
+body select {
+  padding: 5px 8px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  background-color: #54b2af;
 }/*# sourceMappingURL=APP.css.map */

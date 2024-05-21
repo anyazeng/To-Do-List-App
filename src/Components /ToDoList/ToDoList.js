@@ -1,5 +1,5 @@
 import React from "react";
-import Task from "./Task/Task";
+import Task from "../Task/Task";
 import { useState } from "react";
 import FilterTasks from "../FilterTasks/FilterTasks";
 
