@@ -1,11 +1,26 @@
 import React from "react";
 import Task from "./Task/Task";
+import { useState } from "react";
+import FilterTasks from "../FilterTasks/FilterTasks";
 
 export default function ToDoList({ tasks, onToggleTask, onDeleteTask }) {
+  const [selectOption, setSelectOption] = useState("");
+
+  function handleSelectChange(selectOption) {
+    setSelectOption(selectOption);
+  }
+
+  const filteredTasks = tasks.filter((task) => {
+    if (selectOption === "completed") return task.completed;
+    if (selectOption === "not-completed") return !task.completed;
+    return true;
+  });
+
   return (
     <div className="list">
+      <FilterTasks onSelectChange={handleSelectChange} />
       <ul>
-        {tasks.map((task) => (
+        {filteredTasks.map((task) => (
           <Task
             task={task}
             key={task.id}

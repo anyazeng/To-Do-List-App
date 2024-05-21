@@ -40,7 +40,7 @@ function App() {
   return (
     <div className="container">
       <header>
-        <h1>Add Tasks</h1>
+        <h1>To Do</h1>
       </header>
       <AddTasks onAddTasks={handleAddTasks} />
       <ToDoList
